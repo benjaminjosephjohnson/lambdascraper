@@ -1,0 +1,24 @@
+# sererless.yml
+# sererless.yml
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+
+service: testscraper
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: python3.6
+  #deploymentBucket: cryptoscraper-bucket-for-holding-things
+
+functions:
+  getstuff:
+    handler: handler.getstuff
+
+
+
